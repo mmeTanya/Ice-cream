@@ -1,0 +1,209 @@
+/* Styles of Swiper */
+// .reviews {
+//   padding-bottom: 86px;
+//   @media screen and (min-width: 768px) {
+//      padding-bottom: 119px;
+//   }
+//   @media screen and (min-width: 1280px) {
+//     padding-bottom: 132px;
+//   }
+// }
+
+.swiper {
+  width: 280px;
+  padding-bottom: 86px;
+  @media screen and (min-width: 768px) {
+    width: 620px;
+     padding-bottom: 119px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 926px;
+    padding-bottom: 132px;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 74px;
+   @media screen and (min-width: 768px) {
+    bottom: 107px;
+  }
+  @media screen and (min-width: 1280px) {
+    bottom: 120px;
+  }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 18px 0 0;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $quote-second-color;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  background-image: url('../images/reviews/home.png');
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Styles of components of slades */
+
+.slades {
+  &__field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(
+      to bottom,
+      $main-bg-color 114px,
+      $quote-bg-color 114px,
+      $quote-bg-color 422px,
+      $main-bg-color 422px
+    );
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+      background-image: linear-gradient(
+        to bottom,
+        $main-bg-color 104px,
+        $quote-bg-color 104px,
+        $quote-bg-color 268px,
+        $main-bg-color 268px
+      );
+    }
+    @media screen and (min-width: 1280px) {
+      background-image: linear-gradient(
+        to bottom,
+        $main-bg-color 100px,
+        $quote-bg-color 100px,
+        $quote-bg-color 238px,
+        $main-bg-color 238px
+      );
+    }
+  }
+
+  &__image {
+    width: 85px;  
+    margin-bottom: 72px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 66px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 62px;
+    }
+  }
+
+  &__text-background {
+    position: relative;
+    padding: 0px 16px 6px 7px;
+    margin: 0 auto 72px;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      $quote-bg-color,
+      $quote-bg-color 28px,
+      $border-color 28px,
+      $border-color 29px
+    );
+
+    color: $main-text-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.55;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: 460px;
+      padding: 0px 44px 6px 20px;
+      margin: 0 0 70px;
+      font-size: 14px;
+      line-height: 2.16;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 750px;
+      padding: 0px 30px 7px 30px;
+      margin: 0 0 66px;
+      font-size: 16px;
+      line-height: 1.86;
+    }
+
+    &::before {
+      content: '';
+      width: 54px;
+      height: 40px;
+      background-image: url('../images/reviews/quotes.png');
+      background-size: contain;
+      z-index: 0;
+
+      position: absolute;
+      top: -15px;
+      left: 4px;
+      @media screen and (min-width: 768px) {
+        top: -17px;
+        left: -20px;
+      }
+      @media screen and (min-width: 1280px) {
+        top: -15px;
+        left: -5px;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 32px;
+      height: 4px;
+      background-image: url('../images/reviews/group-circle.png');
+      background-size: contain;
+
+      position: absolute;
+      bottom: -53px;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (min-width: 768px) {
+        bottom: -55px;
+      }
+      @media screen and (min-width: 1280px) {
+        bottom: -50px;
+      }
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__author {
+    color: $main-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 20px;
+    }
+  }
+}

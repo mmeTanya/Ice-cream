@@ -1,0 +1,457 @@
+.contacts {
+  background-image: linear-gradient(to bottom, $main-bg-color 6.2% 6.2%, $second-bg-color 6.2% 80%);
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      $main-bg-color 14.5% 14.5%,
+      $second-bg-color 14.5% 80%
+    );
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/sectionbg2-1.png),
+      linear-gradient(to bottom, $main-bg-color 18.5% 18.5%, $second-bg-color 18.5% 80%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.contacts__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: -10px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: -15px;
+  }
+}
+
+.contacts__item {
+  margin: 0 auto;
+  padding: 43px 21px 43px 20px;
+
+  background-color: $main-bg-color;
+  box-shadow: $box-shadow-contacts;
+  border-radius: 24px;
+  transition: transform 500ms linear;
+
+  transform: scale(0) translateX(-360%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+
+  &._active {
+    transform: scale(1) translateX(0);
+    transition: all 0.8s ease 0s;
+    opacity: 1;
+
+    &:nth-child(2) {
+      transition: all 0.8s ease 0.3s;
+    }
+
+    &:nth-child(3) {
+      transition: all 0.8s ease 0.6s;
+    }
+    @media screen and (max-width: 479px) {
+      max-width: 80%;
+    }
+    @media screen and (min-width: 480px) {
+      max-width: 350px;
+    }
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 3 * 20px) / 3);
+      margin: 10px;
+      padding: 50px 32px 50px 31px;
+    }
+    @media screen and (min-width: 1280px) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+      padding: 51px 44px 62px 43px;
+      max-width: 330px;
+    }
+  }
+}
+
+.contacts__item:hover,
+.contacts__item:focus {
+  transform: scale(1.01);
+  background-color: $second-bg-color;
+  box-shadow: 0px 5px 30px $second-hero-bg-color;
+  @media screen and (min-width: 768px) {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: 1280px) {
+    transform: scale(1.1);
+  }
+}
+.contacts__office {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $main-bg-color;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 80px;
+  height: 16px;
+  background-color: $bg-color-product-second;
+  &--green {
+    width: 130px;
+    background-color: $bg-color-product-third;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    width: 73px;
+    height: 28px;
+    font-size: 16px;
+    &--green {
+      width: 138px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+  }
+}
+.contacts__city {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+.contacts__address {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: $second-text-color;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.66;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.83;
+  }
+}
+.schedule {
+  padding: 25px 0;
+  border-top: $quote-border;
+  border-bottom: $quote-border;
+  @media screen and (min-width: 768px) {
+    padding: 30px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 32px 0;
+  }
+}
+.schedule__item:first-child {
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
+}
+.schedule__days {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+.schedule__time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $second-hero-bg-color;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+.address {
+  margin-top: 25px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 32px;
+  }
+}
+.address__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: $second-text-color;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.83;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+.contacts-buttons {
+  margin-top: 54px;
+  margin-bottom: 113px;
+
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-top: 81px;
+    margin-bottom: 165px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 86px;
+  }
+}
+.contacts-buttons__box {
+  display: flex;
+  justify-content: center;
+}
+.contacts-buttons__item {
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
+.contacts-buttons__primary {
+  display: inline-block;
+  margin-bottom: 11px;
+  padding: 10px;
+  font-weight: 700;
+  width: 161.45px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: $contacts-button-color;
+  border: $contacts-button-color;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: $main-bg-color;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 191.45px;
+    height: 44px;
+    margin: 0 14.5px 0 0;
+    padding: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 198px;
+    height: 44px;
+    margin-right: 15px;
+  }
+
+  &::after {
+    display: inline-block;
+    margin-left: 8px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/icon-contacts-bt.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @media screen and (min-width: 768px) {
+      margin-left: 13.4px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-left: 13.62px;
+    }
+  }
+}
+.contacts-buttons__secondary {
+  padding: 0;
+  font-weight: 700;
+  width: 161.45px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: $main-bg-color;
+  border: $main-bg-color;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: $text-title-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $contacts-button-hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 174.05px;
+    height: 44px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 180px;
+    height: 44px;
+  }
+  &::after {
+    display: inline-block;
+    margin-left: 13.17px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/icon-contacts-bt2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media screen and (min-width: 1280px) {
+      margin-left: 13.62px;
+    }
+  }
+}
+
+/*Styles om modal-Franshise*/
+.modal-franchise {
+  background-color: $main-hero-bg-color;
+}
+/*------form of modal------*/
+
+.modal-franchise__btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: $main-bg-color;
+  border: 1px solid $main-bg-color;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-franchise__icon-close {
+  fill: $text-title-color;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-franchise__btn:hover,
+.modal-franchise__btn:focus {
+  background-color: $contacts-button-hover;
+  border: 1px solid $contacts-button-hover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.modal-window-form__title {
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000000bf;
+}
+.modal-form-field__inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+.form-field__label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  padding: 0;
+
+  color: $second-text-color;
+}
+
+.form-field__input-block {
+  position: relative;
+  margin-top: 4px;
+}
+
+.form-field__input {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 12px;
+
+  font: inherit;
+}
+
+.form-field__input:focus-within,
+.form-field-txtarea__input:focus-within {
+  background-color: $contacts-button-hover;
+  border: 1px solid $contacts-button-hover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.form-field-txtarea {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.form-field-txtarea__input {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none;
+  margin-top: 4px;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}

@@ -1,0 +1,198 @@
+.footer {
+  background-color: $second-bg-color;
+}
+.footer__positioning {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 36px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 114px;
+    justify-content: space-evenly;
+  }
+}
+.footer__title {
+  padding-bottom: 43px;
+  font-family: $second-font;
+  text-transform: uppercase;
+  font-weight: normal;
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    padding-bottom: 91px;
+    margin-right: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 480px;
+    padding-bottom: 97px;
+    margin-right: 129px;
+  }
+}
+.footer__title--secondary {
+  font-size: 18px;
+  line-height: 1.16;
+  margin-bottom: 17px;
+  width: 232px;
+  color: $second-hero-bg-color;
+
+  transform: scale(0) translateX(90%);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+
+  &._active {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    margin-top: 7px;
+    margin-bottom: 16px;
+    width: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}
+.footer__title--main {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  width: 200px;
+  color: $text-title-color;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    letter-spacing: 0.06em;
+    width: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+  transform: scale(0.5);
+  animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+@keyframes bop {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.footer__socials {
+  // margin-bottom: 43px;
+  @media screen and (min-width: 1280px) {
+    margin-left: 129px;
+  }
+}
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.social-list__item {
+  margin-right: 28px;
+  padding-top: 4px;
+}
+.social-list__item:last-child {
+  margin-right: 0;
+}
+.social-list__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
+}
+.social-list__link:hover .social-icon,
+.social-list__linkk:focus .social-icon {
+  fill: $text-title-color;
+  transform: scale(1.1);
+}
+.social-icon {
+  width: 32px;
+  height: 32px;
+  fill: $socials-bg-color;
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
+}
+.footer__contact {
+  display: flex;
+  justify-content: flex-end;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: right;
+  color: $main-text-color;
+  margin-bottom: 43px;
+  @media screen and (min-width: 768px) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+}
+.footer__contact--tel {
+  margin-left: 4px;
+  color: $text-title-color;
+  background: linear-gradient(
+    to right,
+    $text-title-color 0,
+    $socials-bg-color 10%,
+    $text-title-color 20%
+  );
+  background-position: 0;
+  // -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 280px;
+  }
+}
+.copyright {
+  display: block;
+}
+.copyright__text {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: $second-text-color;
+  border-top: $quote-border;
+  padding: 22px 91px 25px 79px;
+  @media screen and (min-width: 768px) {
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    padding: 29px 245px 18px 245px;
+  }
+  @media screen and (min-width: 1280px) {
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    padding: 9px 502px 10px 502px;
+  }
+}

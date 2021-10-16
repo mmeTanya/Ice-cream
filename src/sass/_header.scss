@@ -1,0 +1,944 @@
+/*Section header*/
+
+.section-header {
+  background-color: $main-hero-bg-color;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/ellipse-mobile.png');
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/ellipse-tablet.png');
+    background-repeat: no-repeat;
+    background-position: 65%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url('../images/ellipse.png');
+    background-repeat: no-repeat;
+    background-position: 65%;
+  }
+}
+
+.container.header {
+  padding-top: 37px;
+  @media screen and (max-width: 479px) {
+    background-image: url('../images/icecream-mobile.png');
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 100%;
+    padding-bottom: 160px;
+    padding-top: 6px;
+  }
+  @media screen and (min-width: 480px) {
+    background-image: url('../images/icecream-mobile.png');
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 100%;
+    padding-bottom: 160px;
+    padding-top: 6px;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/icecream-tablet.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: 63%;
+    padding: 37px 34px 59px 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: none;
+    padding-bottom: 81px;
+  }
+}
+
+.menu {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 137px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 84px;
+  }
+
+  &__icon {
+    fill: $text-title-color;
+  }
+}
+
+.menu-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    align-items: center;
+
+    color: $main-bg-color;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $text-title-color;
+    }
+  }
+
+  &__link--current {
+    color: $text-title-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__modal {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    align-items: center;
+    text-align: center;
+
+    padding: 14px 53px 14px 37px;
+
+    color: $text-title-color;
+    background: $main-bg-color;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s linear;
+    -webkit-animation: pulsing 2s infinite;
+    animation: pulsing 2s infinite;
+
+    @-webkit-keyframes pulsing {
+      0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+      50% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+      }
+      100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+    }
+
+    @keyframes pulsing {
+      0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+      50% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+      }
+      100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (max-width: 1279px) {
+      height: 50px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+
+    &::after {
+      display: inline-block;
+      margin-left: 8px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-image: url(../images/icon-contacts-bt2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @media screen and (min-width: 768px) {
+        margin-left: 13.4px;
+      }
+      @media screen and (min-width: 1280px) {
+        margin-left: 13.62px;
+      }
+    }
+  }
+}
+
+.icecream {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 66px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 0;
+    margin-bottom: 112px;
+    padding-left: 81px;
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    color: $main-bg-color;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 19px;
+      font-size: 26px; /*8.13vw*/
+      line-height: 1.15;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.14;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 20px;
+      font-size: 38px;
+      line-height: 1.16;
+    }
+  }
+  &__title-passion {
+    font-family: $second-font;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    color: $text-title-color;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 19px;
+      font-size: 48px; /*6.23; /*48px*/
+      line-height: 0.96;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      font-size: 34px;
+      line-height: 0.91;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 20px;
+      font-size: 58px;
+      line-height: 0.89;
+    }
+  }
+}
+
+.icecream-box {
+  &__btn {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+
+    @media screen and (max-width: 1279px) {
+      font-size: 8px;
+      line-height: 1.25;
+      height: 24px;
+    }
+
+    align-items: center;
+    text-align: center;
+
+    padding: 0 13px 0 13px;
+
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+  }
+  .product {
+    color: $main-bg-color;
+    background: $text-title-color;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      background: $button-second-color;
+    }
+  }
+  .made {
+    color: $text-title-color;
+    background: $main-bg-color;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      background: #ecebeb;
+    }
+  }
+}
+
+.milk {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+
+    color: $main-bg-color;
+    @media screen and (min-width: 768px) {
+      font-size: 8px;
+      line-height: 1.5;
+
+      width: 124px;
+
+      margin: 0;
+      margin-left: 120px;
+      margin-bottom: 2px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      line-height: 1.43;
+
+      width: 200px;
+
+      margin: 0;
+      margin-left: 265px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    background-color: $main-hero-bg-color;
+    border-radius: 50%;
+    transition: background-color 1s linear;
+    &:hover,
+    &:focus {
+      border-radius: 50%;
+      background: #ecebeb;
+    }
+    cursor: pointer;
+    border: none;
+
+    align-items: center;
+    padding: 5px;
+    @media screen and (max-width: 1279px) {
+      position: absolute;
+      left: 16.5%;
+      width: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 40px;
+      position: absolute;
+      left: 21.5%;
+    }
+  }
+}
+
+.main-menu {
+  position: relative;
+}
+
+.position-image {
+  &__icecream {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    position: absolute;
+    top: 15.1%;
+    left: 47%;
+    width: 230px;
+    @media screen and (min-width: 1280px) {
+      top: 13.5%;
+    }
+  }
+
+  &__girl {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 76.3%;
+      left: 75%;
+      width: 168px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      position: absolute;
+      top: 74.3%;
+      left: 70%;
+      width: 293px;
+    }
+  }
+
+  &__sixteen {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 20%;
+      left: 90%;
+      width: 43px;
+    }
+    @media screen and (min-width: 1280px) {
+      position: absolute;
+      top: 20%;
+      left: 90%;
+      width: 72px;
+    }
+  }
+
+  &__twentythree {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 35%;
+      left: 89%;
+      width: 51px;
+    }
+    @media screen and (min-width: 1280px) {
+      position: absolute;
+      top: 35%;
+      left: 88%;
+      width: 92px;
+    }
+  }
+
+  &__milk {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 70%;
+      left: 0;
+      width: 124px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      position: absolute;
+      top: 76%;
+      left: 5%;
+      width: 188px;
+      // margin-right: 30px;
+    }
+  }
+}
+
+/* mobile-menu-container */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $menu-bg-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: scroll;
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: white;
+}
+
+.mobile {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
+}
+
+/* button-open */
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-title-color;
+  }
+}
+
+/* menu-container__mobile */
+.mobile-modal {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  align-items: center;
+  text-align: center;
+
+  padding: 14px 53px 14px 37px;
+
+  color: $text-title-color;
+  background: $main-bg-color;
+  border-radius: 22px;
+  border: none;
+  margin: 60px 34px 19px 34px;
+  cursor: pointer;
+
+  &::after {
+    display: inline-block;
+    margin-left: 8px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/icon-contacts-bt2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  @media screen and (max-width: 1279px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 209px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 13.62px;
+  }
+}
+
+.menu-container {
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-nav {
+  &__link {
+    padding: 10px;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px; /*4.38vw*/
+    line-height: 1.29px;
+    display: flex;
+    align-items: center;
+
+    color: $main-bg-color;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $text-title-color;
+    }
+  }
+
+  &__item {
+    padding: 13px 0 11px 24px;
+    border-top: $menu-border;
+    border-bottom: $menu-border;
+    @media (min-width: 768px) {
+      padding: 16px 0 16px 24px;
+    }
+  }
+
+  &__link--current {
+    color: $text-title-color;
+  }
+}
+
+/* Модальное окно */
+
+.modal-header {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal-header:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-header-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 480px) {
+  .modal-header-dialog {
+    max-width: 500px;
+    margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-header-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: rgb(231, 150, 150); /*unset; /*#fff  rgba(212, 124, 124, 0.7)*/
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-header-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(231, 208, 208, 0.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #cea0bf;
+}
+.modal-header-title {
+  font-family: $second-font;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 28%;
+  line-height: 1.5;
+  font-size: 30px;
+  font-weight: 500;
+  color: $text-title-color;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: $text-title-color;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  position: absolute;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+  color: #cea0bf;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal__button-data-header {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  left: auto;
+  width: 30px;
+  height: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: $main-bg-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+    // background: $main-hero-bg-color;
+  }
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-header-body {
+  font-family: $second-font;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+  color: #cea0bf;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(248, 245, 245);
+
+  @media (max-width: 467px) {
+    font-size: 10px;
+  }
+}
+
+.modal-header {
+  &__text {
+    font-family: $second-font;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(241, 234, 234);
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 2.5;
+    text-align: center;
+
+    color: #d41443;
+
+    margin-bottom: 8px;
+
+    @media (max-width: 767px) {
+      font-size: 15px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    &:focus,
+    &:hover {
+      color: #cea0bf;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+
+  &__label-flexed {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+    @media (max-width: 1279px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    padding: 8px;
+    margin-top: 8px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: unset;
+    color: $contacts-button-color;
+    border: 1px solid #c06ea5 /*#cea0bf*/;
+    &:focus,
+    &:hover {
+      color: #cea0bf;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+
+  &__textarea {
+    margin-top: 8px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+    background-color: unset;
+    border: 1px solid #c06ea5 /*#cea0bf*/;
+  }
+
+  &__btn {
+    color: $contacts-button-color;
+    background-color: $main-hero-bg-color;
+    padding: 0px 30px;
+    box-shadow: 1px 0 8px 10px rgba(238, 219, 219, 0.5);
+    &:focus,
+    &:hover {
+      color: #cea0bf;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  z-index: 99;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+.backdrop--hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: initial;
+}
+
+.products__name-header {
+  font-size: 48px;
+  background: linear-gradient(
+    to right,
+    $text-title-color 0,
+    $socials-bg-color 10%,
+    $text-title-color 20%
+  );
+  background-position: 0;
+  // -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 280px;
+  }
+}
+
+.products__name-header {
+  font-family: $second-font;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $main-bg-color;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0;
+  margin: 0;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}

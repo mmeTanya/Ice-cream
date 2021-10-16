@@ -1,0 +1,280 @@
+<section class="section section-header">
+    <div class="container header">
+        <div class="main-menu">
+            <nav class="menu">
+                <!--Logo-->
+                <a class="menu__link" href="index.html" title="Logo">
+                    <svg class="menu__icon" width="199" height="50">
+                        <use href="./images/symbol.svg#icon-logo"></use>
+                    </svg>
+                </a>
+                <!-- Mobile-menu -->
+                <div class="mobile">
+                
+                    <!-- button-open -->
+                    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="mobile__icon-Burger" width="20" height="12">
+                            <use href="./images/burger.svg#icon-Burger"></use>
+                        </svg>
+                    </button>
+                    <div class="menu-container js-menu-container" id="mobile-nav">
+                        <!-- button-close -->
+                        <button class="menu-toggle js-close-menu">
+                            <svg class="close-mobile" width="14" height="14">
+                                <use href="./images/close-mobile.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                        <!-- menu-container__mobile -->
+                        <div class="menu-container__mobile">
+                            
+                            <button type="button" class="mobile-modal" data-modal-open-header-mobile>Buy now</button>
+                            <!-- BACKDROP-mobile -->
+                            <div class="backdrop backdrop--hidden" data-modal-header-mobile>
+                                <div class="modal modal__about">
+                                    <button data-modal-close-header-mobile class="modal__button-data-header close">
+                                        <svg class="modal__button-close">
+                                            <use href="./images/icon-close-products.svg#icon-close-black-18dp-2-1-1-1"></use>
+                                        </svg>
+                                    </button>
+                                    <h3 class="products__name-header products__name-header">Make order</h3>
+                            
+                                    <div class="modal-header-body">
+                                        <form class="modal-header__form">
+                            
+                                            <p class="modal-header__text">Choose a product</p>
+                                            <div class="modal-header__box">
+                                                <label class="modal-header__label">
+                                                    <input class="modal-header__input" type="checkbox" name="product" value="Icecream" checked />
+                                                    Icecream
+                                                </label>
+                                                <label class="modal-header__label">
+                                                    <input class="modal-header__input" type="checkbox" name="product" value="Ice coffee" checked />
+                                                    Ice coffee
+                                                </label>
+                                                <label class="modal-header__label">
+                                                    <input class="modal-header__input" type="checkbox" name="product" value="Milkshakes" />
+                                                    Milkshakes
+                                                </label>
+                                            </div>
+                            
+                                            <p class="modal-header__text">Should we call you back?</p>
+                                            <div class="modal-header__box">
+                                                <label class="modal-header__label">
+                                                    <input class="modal-header__input" type="radio" name="call back" value="Yes" checked />
+                                                    Yes
+                                                </label>
+                                                <label class="modal-header__label">
+                                                    <input class="modal-header__input" type="radio" name="call back" value="No" />
+                                                    No
+                                                </label>
+                                            </div>
+                            
+                                            <p class="modal-header__text">Leave your contacts</p>
+                                            <label class="modal-header__label modal-header__label-flexed">
+                                                Email
+                                                <input class="modal-header__input" type="email" name="email" placeholder="example@mail.com">
+                                            </label>
+                                            <label class="modal-header__label modal-header__label-flexed">
+                                                Order details
+                                                <textarea class="modal-header__textarea" name="Order details" rows="5"
+                                                    placeholder="Type your message here..."></textarea>
+                                            </label>
+                            
+                                            <button class="modal-header__btn icecream-box__btn" type="submit">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- mobile-nav -->
+                            <ul class="mobile-nav">
+                                <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--current" href="index.html"
+                                        title="Home">Home</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#advantages" title="About us">About
+                                        us</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#about" title="How it’s made?">How it’s
+                                        made?</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#products" title="Our products">Our products</a>
+                                </li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#contacts" title="Contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Nav-->
+                <ul class="menu-nav">
+                    <li class="menu-nav__item"><a class="menu-nav__link menu-nav__link--current"
+                            href="index.html" title="Home">Home</a></li>
+                    <li class="menu-nav__item"><a class="menu-nav__link" href="#advantages" title="About us">About us</a>
+                    </li>
+                    <li class="menu-nav__item"><a class="menu-nav__link" href="#about" title="How it’s made?">How
+                            it’s made?</a></li>
+                    <li class="menu-nav__item"><a class="menu-nav__link" href="#products" title="Our products">Our
+                            products</a></li>
+                    <li class="menu-nav__item"><a class="menu-nav__link" href="#contacts" title="Contact">Contact</a>
+                    </li>
+                </ul>
+                
+ 
+                        <button type="button" class="button menu-nav__modal" data-modal-open-header>Buy now</button>
+                        <!-- BACKDROP -->
+                        <div class="backdrop backdrop--hidden" data-modal-header>
+
+                            <div class="modal modal__about">
+                                <button data-modal-close-header class="modal__button-data-header close">
+                                    <svg class="modal__button-close">
+                                        <use href="./images/icon-close-products.svg#icon-close-black-18dp-2-1-1-1"></use>
+                                    </svg>
+                                </button>
+                                <h3 class="products__name-header products__name-header">Make order</h3>
+                                
+                                <div class="modal-header-body">
+                                    <form class="modal-header__form">
+                                
+                                        <p class="modal-header__text">Choose a product</p>
+                                        <div class="modal-header__box">
+                                            <label class="modal-header__label">
+                                                <input class="modal-header__input" type="checkbox" name="product" value="Icecream" checked />
+                                                Icecream
+                                            </label>
+                                            <label class="modal-header__label">
+                                                <input class="modal-header__input" type="checkbox" name="product" value="Ice coffee" checked />
+                                                Ice coffee
+                                            </label>
+                                            <label class="modal-header__label">
+                                                <input class="modal-header__input" type="checkbox" name="product" value="Milkshakes" />
+                                                Milkshakes
+                                            </label>
+                                        </div>
+                                
+                                        <p class="modal-header__text">Should we call you back?</p>
+                                        <div class="modal-header__box">
+                                            <label class="modal-header__label">
+                                                <input class="modal-header__input" type="radio" name="call back" value="Yes" checked />
+                                                Yes
+                                            </label>
+                                            <label class="modal-header__label">
+                                                <input class="modal-header__input" type="radio" name="call back" value="No" />
+                                                No
+                                            </label>
+                                        </div>
+                                
+                                        <p class="modal-header__text">Leave your contacts</p>
+                                        <label class="modal-header__label modal-header__label-flexed">
+                                            Email
+                                            <input class="modal-header__input" type="email" name="email" placeholder="example@mail.com">
+                                        </label>
+                                        <label class="modal-header__label modal-header__label-flexed">
+                                            Order details
+                                            <textarea class="modal-header__textarea" name="Order details" rows="5"
+                                                placeholder="Type your message here..."></textarea>
+                                        </label>
+                                
+                                        <button class="modal-header__btn icecream-box__btn" type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+            </nav>
+            <div class="icecream">
+                <h1 class="icecream__title">ice cream <br> made with <br> <span
+                        class="icecream__title-passion">passion</span></h1>
+                <div class="icecream-box">
+                    <a class="icecream-box__btn product" href="#products" title="products">Products</a>
+                    <a class="icecream-box__btn made" href="#about" title="How it’s made?">How it’s made?</a>
+                </div>
+            </div>
+            <div class="milk">
+                <p class="milk__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et</p>
+                <button type="button" class="milk__button"><img
+                        src="/images/button-products.png" alt="Кнопка «button»"></button>
+            </div>
+            <div class="position-image">
+
+                <img class="position-image__icecream"
+                    srcset="
+                    ./images/icecream.png" 
+                    src="./images/icecream.png" 
+                    alt="icecream" 
+                    width="230" 
+                />
+                <img class="position-image__girl"
+                    srcset="
+                    ./images/girl.png" 
+                    src="./images/girl.png" 
+                    alt="girl" 
+                    width="293" 
+                />
+                <img class="position-image__sixteen"
+                     srcset="
+                    ./images/16.png" 
+                    src="./images/16.png" 
+                    alt="sixteen" width="72" />
+                <img class="position-image__twentythree grow" 
+                    srcset="
+                    ./images/23.png" 
+                    src="./images/23.png" 
+                    alt="twentythree" 
+                    width="92" />
+                <img class="position-image__milk" 
+                    srcset="
+                    ./images/milk.png" 
+                    src="./images/milk.png" 
+                    alt="milk" 
+                    width="188" 
+                />
+
+                <img class="position-image__icecream"
+                    srcset="
+                    ./images/icecream.png 1x,
+                    ./images/icecream-mobile.png 2x"
+                    src="./images/icecream.png" 
+                    alt="icecream" 
+                    width="236" 
+                />
+
+                <img class="position-image__girl" 
+                    srcset="
+                    ./images/girl.png"
+                    src="./images/girl.png" 
+                    alt="girl" 
+                    width="293" 
+                />
+
+                <img class="position-image__sixteen" 
+                    srcset="
+                    ./images/16.png" 
+                    src="./images/16.png" 
+                    alt="sixteen" 
+                    width="72" 
+                />
+                <img class="position-image__twentythree" 
+                    srcset="
+                    ./images/23.png" 
+                    src="./images/23.png" 
+                    alt="twentythree" 
+                    width="92" 
+                />
+                <img class="position-image__milk" 
+                    srcset="
+                    ./images/milk.png" 
+                    src="./images/milk.png" 
+                    alt="milk" 
+                    width="188" 
+                />
+
+            </div>
+        </div>
+        
+
+
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+
+</section>
